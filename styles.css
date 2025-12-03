@@ -43,7 +43,7 @@ li a{
 li a:hover{
     transform: scale(1.2);
 }
-@media (max-width:650px){
+@media (max-width:1050px){
     
     nav h1{
         font-size: 15px;
@@ -113,7 +113,7 @@ li a:hover{
 }
 
 
-@media (max-width:650px){
+@media (max-width:1050px){
     
     .img_principal img{
         display: none;
@@ -150,7 +150,7 @@ li a:hover{
     color: aqua;
 }
     
-@media (max-width:650px){
+@media (max-width:1050px){
     
     .img_conteudo2 img{
         margin-top: 40px;
@@ -242,7 +242,7 @@ li a:hover{
     box-shadow: 0px 0px 25px 0.5px aqua;
 }
 
-@media (max-width:650px){
+@media (max-width:1050px){
     .main-contato{
         padding: 30px 5%;
         display: flex;
