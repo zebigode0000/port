@@ -191,7 +191,7 @@ li a:hover{
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-
+    margin-bottom: 40px;
 }
 .projetos button{
     background-color: transparent;
@@ -210,56 +210,50 @@ li a:hover{
     transform: scale(1.04);
     box-shadow: 0px 1px 25px 1px aqua;
 }
-.titulo-contato h1{
-    margin-top: 50px;
-}
 .main-contato{
-    
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-family: poppins;
     background-color: #22282F;
+    flex-wrap: nowrap;
+    padding: 30px 15%;
+
 }
 .main-contato span{
     color: aqua;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 300px;
-    width: 90%;     
-    margin: 0 auto;
-    align-items: center;
+.titulo-contato{
+    line-height: 0.1px,;
+    margin: 0;
+}
+.main-contato button{
+    border-radius: 25px;
+    width: 200px;
+    background-color: aqua;
+    border: 0px solid black;
+    transition: 0.3s ease;
+    font-family: poppins;
+    font-weight: bold;
+    color: rgb(32, 32, 32);
+}
+.main-contato button:hover{
+    transform: scale(1.06);
+    box-shadow: 0px 0px 25px 0.5px aqua;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%; 
-    padding: 10px;
-    border: 1px solid rgb(165, 165, 165);
-    border-radius: 5px;
-    box-sizing: border-box; 
-}
-
-textarea {
-    resize: vertical; 
-    height: 100px;
-}
-
-button[type="submit"] {
-    color: aliceblue;
-    background-color: transparent;
-    border: 1px solid aqua;
-    border-radius: 10px;
-    width: 150px; 
-    height: 35px;
-    transition: 0.5s ease;
-    margin-bottom: 20px;
-}
-button[type="submit"]:hover{
-    cursor: pointer;
-    transform: scale(1.05);
+@media (max-width:412px){
+    .main-contato{
+        padding: 30px 5%;
+        display: flex;
+        flex-direction: column;
+    }
+    .titulo-contato{
+        margin-bottom: 30px;
+    }
+    .titulo-contato h1{
+        line-height: 1.2;
+    }
 }
 footer p{
     text-align: center;
