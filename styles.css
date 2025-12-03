@@ -149,6 +149,9 @@ li a:hover{
 .span-web{
     color: aqua;
 }
+.p-descricao2{
+    padding-bottom: 20px;
+}
     
 @media (max-width:1050px){
     
