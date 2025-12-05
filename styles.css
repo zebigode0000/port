@@ -302,7 +302,7 @@ li a:hover{
 @media (max-width:600px){
 
     .certificado-img img {
-    width: 350px;
+    width: 500px;
     border-radius: 20px;}
 
     .certificado-text{
@@ -311,11 +311,11 @@ li a:hover{
 
     .certificado-text p{
         text-align: center;
-        width: auto;
+        width: 500px;
     }
 
     .certificado-button button{
-        width: 200px;
+        width: 225px;
         height: 50px;
         font-size: 15px;
         transition: none;
