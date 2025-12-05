@@ -302,16 +302,16 @@ li a:hover{
 @media (max-width:600px){
 
     .certificado-img img {
-    width: 500px;
+    width: 400px;
     border-radius: 20px;}
 
     .certificado-text{
     text-align: center;
-    width: 500px; }
+    width: 400px; }
 
     .certificado-text p{
         text-align: center;
-        width: 500px;
+        width: auto;
     }
 
     .certificado-button button{
