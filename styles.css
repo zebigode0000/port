@@ -66,10 +66,10 @@ li a:hover{
     }
     li a{  
         display: inline-block;
-        transition: 0.3s ease;
+        transition: none;
     }
     li a:hover{
-        transform: scale(1.5);
+        transform: none;
     }
 }
 .conteudo{
