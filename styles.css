@@ -282,6 +282,21 @@ li a:hover{
     width: 600px;
 }
 }
+@media (max-width:500px){
+
+    .certificado-img img {
+    width: 350px;
+    border-radius: 20px;}
+
+    .certificado-text{
+    text-align: center;
+    font-size: 10px;
+    width: 200px;}
+
+    .certificado-text p{
+        
+    }
+}
 .main-contato{
     display: flex;
     justify-content: space-between;
