@@ -236,9 +236,6 @@ li a:hover{
     text-align: center;
     width: 800px;
 }
-.certificado-text p{
-    
-}
 .certificado-img img {
     width: 800px;
     border-radius: 20px;
@@ -273,6 +270,17 @@ li a:hover{
     transform: scale(1.05);
     color: aqua;
 
+}
+@media (max-width:1050px){
+
+    .certificado-img img {
+    width: 600px;
+    border-radius: 20px;}
+
+    .certificado-text{
+    text-align: center;
+    width: 600px;
+}
 }
 .main-contato{
     display: flex;
