@@ -236,10 +236,11 @@ li a:hover{
 }
 .img_conteudo2{
     text-align: center;
-    animation: aparecerside 1s cubic-bezier(.34,1.56,.64,1) forwards;
+    animation: aparecerside 1.5s cubic-bezier(.34,1.56,.64,1) forwards;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
     animation-delay: 0.7s;
+    animation-fill-mode: both;
 }
 .img_conteudo2 img{
     border-radius: 50%;
