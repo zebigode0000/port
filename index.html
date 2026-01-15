@@ -34,7 +34,7 @@
                 <h1>Eu sou o <span class="palavra_colorida">Augusto</span></h1>
                 <p class="p_descricao">Ajudo empresas e empreendedores a criarem uma presença digital forte. Especialista em desenvolver sites rápidos, otimizados para o Google e totalmente adaptados para celulares. Do design à publicação, cuido de toda a parte técnica para você focar no seu negócio.</p>
                 <div class="button_contato">
-                    <button>
+                    <button class="btt">
                         <p>Entre em Contato</p>
                     </button>
                 </div>
@@ -123,7 +123,7 @@
             </p>
         </div>
         <div>
-            <button>
+            <button class="btt">
                 <p>Contato</p>
             </button>
         </div>
@@ -167,6 +167,18 @@ document.querySelectorAll('nav a').forEach(link => {
     if (target) smoothScrollTo(target, 1000)
   })
 })
+</script>
+<script>
+    let btt = document.querySelectorAll('.btt').forEach(botao => {botao.addEventListener('click', function abrirWhats() {
+    const telefone = '5511999999999'; 
+    const mensagem = 'Olá, gostaria de mais informações!';
+    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+    })
+  })
+
+    
+
 </script>
 
 </body>

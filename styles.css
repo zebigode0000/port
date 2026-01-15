@@ -215,6 +215,7 @@ li a:hover{
     padding: 0px 10px;
     margin-bottom: 40px;
     animation: bttn 1s ease-in-out;
+    
 }
 .button_contato button:hover{
     transform: scale(1.08);
@@ -525,6 +526,7 @@ li a:hover{
 .main-contato button:hover{
     transform: scale(1.06);
     box-shadow: 0px 0px 25px 0.5px aqua;
+    cursor: pointer;
 }
 
 @media (max-width:1050px){
