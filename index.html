@@ -18,10 +18,10 @@
                 desenvolvedor web
             </h1>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetao">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#home" class="section">Home</a></li>
+                <li><a href="#sobre" class="section">Sobre</a></li>
+                <li><a href="#projetao" class="section">Projetos</a></li>
+                <li><a href="#contato" class="section">Contato</a></li>
             </ul>
         </div>
         </nav>
@@ -32,7 +32,7 @@
             <div class="conteudo_principal">
                 <p class="p_amigo">Ola, meu Amigo!</p>
                 <h1>Eu sou o <span class="palavra_colorida">Augusto</span></h1>
-                <p class="p_descricao">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis nihil saepe natus temporibus explicabo praesentium numquam, unde laudantium veniam facere amet accusantium aliquam impedit minima enim hic odit voluptates repudiandae.</p>
+                <p class="p_descricao">Ajudo empresas e empreendedores a criarem uma presença digital forte. Especialista em desenvolver sites rápidos, otimizados para o Google e totalmente adaptados para celulares. Do design à publicação, cuido de toda a parte técnica para você focar no seu negócio.</p>
                 <div class="button_contato">
                     <button>
                         <p>Entre em Contato</p>
@@ -46,7 +46,7 @@
     </main>
 </div>
     
-    <main class="main_2">
+    <main class="main_2 " id="sobre">
         <div id="sobre"></div>
         <div class="container">
             <div class="div-flex">
@@ -55,8 +55,8 @@
             </div>
                 <div class="conteudo2">
                     <p class="p-2">Sobre Mim</p>
-                    <h1>Sou Designer de interface do usuário e <span class="span-web">Desenvolvedor Web</span></h1>
-                    <p class="p-descricao2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, deserunt possimus mollitia exercitationem ratione, eaque omnis modi ullam earum perspiciatis error nobis quis facere magnam unde quaerat animi ut et.</p>
+                    <h1>Sou especialista em <span class="span-web">Desenvolvedor Web</span></h1>
+                    <p class="p-descricao2">Ajudo você a colocar seu projeto no ar com eficiência e qualidade. Desenvolvo sites estruturados para serem leves e intuitivos, focando sempre na melhor experiência para quem navega. Meu foco é entregar um produto final que funcione perfeitamente em computadores e celulares, garantindo que sua marca passe credibilidade e profissionalismo na internet. Se você busca uma solução digital sólida para sua empresa ou projeto pessoal, eu cuido da parte técnica para que você possa focar no que realmente importa: seus resultados.</p>
                 <div>
             </div>
         </div>
@@ -69,7 +69,7 @@
         <div class="conteudo3">
             <div class="projetos projt1">
                 <h1>Site de Tatuagem</h1>
-                <p>Um site de negócios criado usando HTML, CSS, Bootstrap e JavaScript, apresentando um design moderno e elementos interativos, servindo de modelo para projetos web diversos.</p>
+                <p>Landing page responsiva desenvolvida para um estúdio de tatuagem, apresentando serviços, informações do estúdio, galeria de trabalhos e contato. O foco foi criar uma experiência visual moderna e profissional.</p>
                 <a href="https://projetogugo.vercel.app" target="_blank">
                     <button> 
                         <p>Visualizar Site</p>
@@ -78,7 +78,7 @@
             </div>
             <div class="projetos projt2">
                 <h1>Site de Clinica Dentista</h1>
-                <p>Um site de negócios criado usando HTML, CSS, Bootstrap e JavaScript, apresentando um design moderno e elementos interativos, servindo de modelo para projetos web diversos.</p>
+                <p>Landing page responsiva para um consultório odontológico, destacando serviços, especialidades e formas de contato. O design foi pensado para transmitir confiança e clareza ao usuário.</p>
                 <a href="https://projetodentista.vercel.app" target="_blank">
                     <button>
                         <p>Visualizar Site</p>
@@ -87,7 +87,7 @@
             </div>
             <div class="projetos projt3">
                 <h1>Lista de Tarefas</h1>
-                <p>Um site de negócios criado usando HTML, CSS, Bootstrap e JavaScript, apresentando um design moderno e elementos interativos, servindo de modelo para projetos web diversos.</p>
+                <p>Aplicação web simples para gerenciamento de tarefas, permitindo adicionar, concluir e remover atividades. O projeto demonstra lógica em JavaScript e interação com o usuário.</p>
                 <a href="https://todolist-five-blond.vercel.app" target="_blank">
                     <button>
                         <p>Visualizar Site</p>
@@ -112,7 +112,7 @@
             </div>
         </div>
     </section>
-    <main class="main-contato">
+    <main class="main-contato" id="contato">
         <div id="contato"></div>
         <div class="titulo-contato">
             <h1>
@@ -132,5 +132,42 @@
     <footer>
         <p>Direitos autorais &copy; 2025 - Augusto - Todos os direitos Reservado.</p>
     </footer>
+    <script>
+function smoothScrollTo(target, duration = 800) {
+  const start = window.pageYOffset
+  const end = target.getBoundingClientRect().top + start
+  const distance = end - start
+  let startTime = null
+
+  function easeInOut(t) {
+    return t < 0.5
+      ? 2 * t * t
+      : 1 - Math.pow(-2 * t + 2, 2) / 2
+  }
+
+  function animation(currentTime) {
+    if (!startTime) startTime = currentTime
+    const timeElapsed = currentTime - startTime
+    const progress = Math.min(timeElapsed / duration, 1)
+
+    window.scrollTo(0, start + distance * easeInOut(progress))
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation)
+    }
+  }
+
+  requestAnimationFrame(animation)
+}
+
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault()
+    const target = document.querySelector(link.getAttribute('href'))
+    if (target) smoothScrollTo(target, 1000)
+  })
+})
+</script>
+
 </body>
 </html>

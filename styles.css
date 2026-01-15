@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     color: white;
     background-color: #1B1F24;
@@ -84,6 +87,10 @@ nav{
     margin: 20px;
     
 }
+.section{
+    transition: 1s ease;
+}
+
 nav h1{
     font-family: poppins;
     font-size: larger;
@@ -98,10 +105,12 @@ nav h1{
 li:nth-child(1){
     animation: nav 1s cubic-bezier(.34,1.56,.64,1) forwards;
     animation-delay: 0s;
+    transition: ease;
 }
 li:nth-child(2){
     animation: nav 1s cubic-bezier(.34,1.56,.64,1) forwards;
     animation-delay: 0.2s;
+    transition: 1s ease;
 }
 li:nth-child(3){
     animation: nav 1s cubic-bezier(.34,1.56,.64,1) forwards;
@@ -193,6 +202,7 @@ li a:hover{
     height: 350px;
     object-fit: cover;
     margin-bottom: 20px;
+    image-rendering: optimizeQuality;
 }
 .button_contato button{
     background-color: aqua;
@@ -251,6 +261,7 @@ li a:hover{
     border: 1.5px solid rgb(88, 88, 88);
     box-shadow: 0px 0px 30px 3px aqua;
     margin-bottom: 40px;
+    image-rendering: optimizeQuality;
 }
 .p-2{
     font-weight: bold;
@@ -335,6 +346,7 @@ li a:hover{
     transition: 0.5s ease;
     margin-bottom: 15px;
 }
+
 .conteudo3{
     display: flex;
     justify-content: center;
@@ -384,6 +396,16 @@ li a:hover{
 .certificado-text h1, p{
     font-family: poppins;
 }
+.certificado-text h1{
+    animation: aparecerside 1s cubic-bezier(.34,1.56,.64,1) forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.certificado-text p{
+    animation: aparecerside 1s cubic-bezier(.34,1.56,.64,1) forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
 .certificado-text h1 span{
     color: aqua;
 }
@@ -394,6 +416,12 @@ li a:hover{
 .certificado-img img {
     width: 800px;
     border-radius: 20px;
+    image-rendering: optimizeQuality;
+}
+.certificado-img{
+    animation: aparecerside 1s cubic-bezier(.34,1.56,.64,1) forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 .certificado-button{
     display: flex;
@@ -401,6 +429,9 @@ li a:hover{
     height: 50px;
     margin-bottom: 50px;
     margin-top: 30px;
+    animation: aparecerside 1s cubic-bezier(.34,1.56,.64,1) forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 .certificado-button a{
     text-decoration: none;
@@ -429,7 +460,7 @@ li a:hover{
 @media (max-width:1050px){
 
     .certificado-img img {
-    width: 600px;
+    width: 500px;
     border-radius: 20px;}
 
     .certificado-text{
@@ -485,10 +516,11 @@ li a:hover{
     width: 200px;
     background-color: aqua;
     border: 0px solid black;
-    transition: 0.3s ease;
+    transition: all 1s ease;
     font-family: poppins;
     font-weight: bold;
     color: rgb(32, 32, 32);
+    
 }
 .main-contato button:hover{
     transform: scale(1.06);
