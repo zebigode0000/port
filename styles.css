@@ -551,3 +551,11 @@ li a:hover{
 footer p{
     text-align: center;
 }
+.main-contato a{
+    background-color: aqua;
+    padding: 10px 40px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #22282F;
+    font-weight: 600;
+}
